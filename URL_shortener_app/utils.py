@@ -22,7 +22,7 @@ def create_shortened_url(model_instance):
     random_code = create_random_code()
     # gets the model class     
     model_class = model_instance.__class__
-    if model_class.objects.filter(short_url=random_code)
+    if model_class.objects.filter(short_url=random_code):
         return create_shortened_url(model_instance)
 
     return random_code
